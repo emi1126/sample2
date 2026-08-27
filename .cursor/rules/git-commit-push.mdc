@@ -1,0 +1,30 @@
+---
+description: サイト修正後は確認のうえ main へ commit と push まで行う
+alwaysApply: true
+---
+
+# Git: 作業完了後の commit / push
+
+サイトの修正・更新が完了したら、許可を待たずに次まで実施する。
+
+1. 変更内容を確認する
+2. `git status` で変更ファイルを確認する
+3. 何を直したか分かる簡潔なメッセージで commit する
+4. `origin` の現在ブランチへ通常の `git push` をする
+5. push 成功を `git status` で確認する
+
+例: `fix: お問い合わせセクションの改行を修正`
+
+## 止めて報告する（勝手に進めない）
+
+- push 先リモートが `https://github.com/emi1126/sample2.git` と異なる
+- ブランチが `main` 以外
+- 大量のファイルが意図せず変わっている
+- 「ブドウ」フォルダ外に意図しない変更がある
+- 既存ファイルの大量削除が必要
+- コンフリクトがある
+- force push や履歴の書き換えが必要
+- 認証エラーなどで通常の push ができない
+
+force push と履歴の書き換えは、明示的な許可なく行わない。
+基本は `git add` → `git commit` → `git push` のみ。
