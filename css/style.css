@@ -86,16 +86,20 @@ button, input, select, textarea { font-family: inherit; }
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 4.6vw, 2.05rem);
   font-weight: 600;
-  line-height: 1.45;
-  letter-spacing: 0.06em;
-  text-wrap: balance;
-  max-width: 18em;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-wrap: pretty;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 .lead {
   margin: 0 0 24px;
   color: var(--ink-soft);
   max-width: 42em;
   text-wrap: pretty;
+  overflow-wrap: normal;
+  word-break: normal;
+  line-break: auto;
 }
 
 .section-head {
@@ -455,6 +459,22 @@ button, input, select, textarea { font-family: inherit; }
   align-items: start;
 }
 .mosaic .photo img { min-height: 0; }
+
+#landscape .mosaic {
+  gap: 16px;
+}
+#landscape .mosaic .photo img {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+#landscape .mosaic .photo--field img {
+  object-position: 72% 42%;
+}
+#landscape .mosaic .photo--tall img {
+  object-position: 38% 28%;
+}
 
 /* Cards */
 .story-grid,
@@ -914,8 +934,28 @@ th {
   display: grid;
   gap: 16px;
   text-align: center;
+  justify-items: center;
 }
-.cta-band .lead { margin-inline: auto; text-align: left; }
+.cta-band .heading {
+  max-width: min(26em, 100%);
+  margin-inline: auto;
+  margin-bottom: 8px;
+  font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+  letter-spacing: 0.04em;
+  text-wrap: pretty;
+  overflow-wrap: normal;
+  word-break: normal;
+  line-break: auto;
+}
+.cta-band .lead {
+  max-width: 32em;
+  margin: 0 auto 8px;
+  text-align: left;
+  text-wrap: pretty;
+  overflow-wrap: normal;
+  word-break: normal;
+  line-break: auto;
+}
 .cta-band .actions { justify-content: center; }
 
 .gift-mosaic { margin: 20px 0 24px; }
@@ -931,7 +971,8 @@ th {
   .header-cta { min-height: 40px; padding: 0 16px; font-size: 0.78rem; }
   .section { padding: 80px 0; }
   .section--grape { padding: 64px 0; }
-  .mosaic { grid-template-columns: 1.15fr 0.85fr; align-items: start; }
+  .mosaic { grid-template-columns: 1fr 1fr; align-items: start; }
+  #landscape .mosaic { grid-template-columns: 1fr 1fr; }
   .people-grid,
   .variety-grid,
   .event-grid,
