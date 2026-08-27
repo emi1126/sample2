@@ -36,12 +36,17 @@
 
   <main id="main">
     <section class="section">
-      <div class="wrap wrap--narrow">
-        <p class="kicker">GRAPE</p>
-        <h1 class="heading">わが家のぶどうたち</h1>
-        <p class="lead">食べておいしく、見た目も楽しい。定番から珍種まで、ぶどう農家ならではのラインナップです。年によって栽培品種は変わり、ここにない少量品種も販売します。時期は目安です。</p>
-        <div class="actions">
-          <a class="btn btn--grape" href="https://budounofukuoka.stores.jp/?category_id=62df8ca400460779efccbf48" target="_blank" rel="noopener noreferrer">STORESでぶどうを見る</a>
+      <div class="wrap">
+        <header class="section-head">
+          <p class="kicker">GRAPE</p>
+          <h1 class="heading">わが家のぶどうたち</h1>
+          <p class="lead">食べておいしく、見た目も楽しい。定番から珍種まで、ぶどう農家ならではのラインナップです。年によって栽培品種は変わり、ここにない少量品種も販売します。</p>
+        </header>
+        <figure class="photo photo--wide">
+          <img src="./images/ogp.jpg" alt="黒・赤・緑のぶどうが並ぶ葡萄のふくおか" />
+        </figure>
+        <div class="actions" style="margin-top:28px;justify-content:center;">
+          <a class="btn btn--grape" href="https://budounofukuoka.stores.jp/?category_id=62df8ca400460779efccbf48" target="_blank" rel="noopener noreferrer">オンラインショップを見る</a>
           <a class="btn btn--paper" href="https://budounofukuoka.stores.jp/?category_id=619dc13288eabe0c0e9b2153" target="_blank" rel="noopener noreferrer">贈答品を見る</a>
         </div>
       </div>
@@ -49,132 +54,115 @@
 
     <section class="section section--paper" id="calendar">
       <div class="wrap">
-        <p class="kicker">収穫時期</p>
-        <h2 class="heading">旬のカレンダー</h2>
-        <p class="lead">正確な月は天候と年で変わります。品種ごとの「○月頃」は、農園で確認でき次第この表を更新してください。</p>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>時期</th><th>農園の動き</th><th>並びやすい品種（後から入力）</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>8月</td>
-                <td>上旬ごろ直売開始。熟した順に店頭へ。</td>
-                <td class="placeholder-text">例：○月頃の品種名を追記</td>
-              </tr>
-              <tr>
-                <td>9月</td>
-                <td>種類がいちばん豊富になりやすい時期。</td>
-                <td class="placeholder-text">例：○月頃の品種名を追記</td>
-              </tr>
-              <tr>
-                <td>10月以降</td>
-                <td>ぶどうはなくなり次第終了。加工品の製造・冬の直売へ。</td>
-                <td>ジュース・ジャム・ドライフルーツなど</td>
-              </tr>
-            </tbody>
-          </table>
+        <header class="section-head">
+          <p class="kicker">収穫時期</p>
+          <h2 class="heading">旬のカレンダー</h2>
+          <p class="lead">正確な月は天候と年で変わります。人気品種の収穫開始はInstagramでもお知らせしています。</p>
+        </header>
+        <div class="calendar">
+          <article class="calendar__month">
+            <p class="calendar__step">01</p>
+            <h3>8月</h3>
+            <p>上旬ごろ直売開始。熟した順に店頭へ。パック売りから贈答用箱まで。</p>
+          </article>
+          <article class="calendar__month">
+            <p class="calendar__step">02</p>
+            <h3>9月</h3>
+            <p>種類がいちばん豊富になりやすい時期。その日の並びは、来てからのお楽しみです。</p>
+          </article>
+          <article class="calendar__month">
+            <p class="calendar__step">03</p>
+            <h3>10月以降</h3>
+            <p>ぶどうはなくなり次第終了。ジュース・ジャム・ドライフルーツなどの加工と、冬の直売へ。</p>
+          </article>
         </div>
-        <p class="note" style="margin-top:16px;">人気品種の収穫開始はInstagramでもお知らせしています。</p>
       </div>
     </section>
 
     <section class="section" id="lineup">
       <div class="wrap">
-        <p class="kicker">品種紹介</p>
-        <h2 class="heading">色・種・公式の言葉</h2>
-        <p class="lead">甘さ・酸味の点数など、確認できていない評価は書いていません。空欄は後から埋められます。</p>
+        <header class="section-head">
+          <p class="kicker">品種紹介</p>
+          <h2 class="heading">葡萄のふくおかの図鑑</h2>
+          <p class="lead">公式サイトで紹介している代表的な品種です。写真は同じ大きさで揃えています。</p>
+        </header>
         <div class="variety-grid">
           <article class="card" id="shine">
-            <figure class="photo-slot"><div class="photo-slot__frame" data-label="シャインマスカットの写真"></div></figure>
+            <figure class="photo photo--contain"><img src="./images/lineup_grape_16.png" alt="シャインマスカット" /></figure>
             <div class="card__body">
               <h3>シャインマスカット</h3>
               <dl class="specs">
                 <dt>色</dt><dd>緑</dd>
                 <dt>種</dt><dd>なし（皮ごと食べられる）</dd>
-                <dt>香り</dt><dd>マスカット香</dd>
-                <dt>旬</dt><dd class="placeholder-text">○月頃（追記）</dd>
-                <dt>甘さ</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>酸味</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>食感</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>食べ方</dt><dd>冷蔵庫で保存し、食べる分ずつ洗って。</dd>
-                <dt>用途</dt><dd>ご自宅用・贈答・干しぶどうにも</dd>
+                <dt>特徴</dt><dd>マスカット香り好きにはたまらない。</dd>
+                <dt>収穫時期</dt><dd>直売期（8月上旬〜なくなり次第）</dd>
+                <dt>楽しみ方</dt><dd>ご自宅用・贈答。冷蔵庫で保存し、食べる分ずつ洗って。</dd>
               </dl>
             </div>
           </article>
           <article class="card" id="kyoho">
-            <figure class="photo-slot"><div class="photo-slot__frame" data-label="巨峰の写真"></div></figure>
+            <figure class="photo photo--contain"><img src="./images/lineup_grape_25.png" alt="巨峰" /></figure>
             <div class="card__body">
               <h3>巨峰</h3>
               <dl class="specs">
                 <dt>色</dt><dd>黒</dd>
                 <dt>種</dt><dd>あり・なし両方</dd>
-                <dt>味</dt><dd>コクと甘さは負けません。</dd>
-                <dt>旬</dt><dd class="placeholder-text">○月頃（追記）</dd>
-                <dt>甘さ / 酸味 / 食感 / 香り</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>用途</dt><dd>生食・ジュース・干しぶどう・贈答</dd>
+                <dt>特徴</dt><dd>コクと甘さは負けません。</dd>
+                <dt>収穫時期</dt><dd>直売期（8月上旬〜なくなり次第）</dd>
+                <dt>楽しみ方</dt><dd>生食・ジュース・干しぶどう・贈答</dd>
               </dl>
             </div>
           </article>
           <article class="card" id="pione">
-            <figure class="photo-slot"><div class="photo-slot__frame" data-label="ピオーネの写真"></div></figure>
+            <figure class="photo photo--contain"><img src="./images/lineup_grape_26.png" alt="ピオーネ" /></figure>
             <div class="card__body">
               <h3>ピオーネ</h3>
               <dl class="specs">
                 <dt>色</dt><dd>黒</dd>
                 <dt>種</dt><dd>なし</dd>
-                <dt>味</dt><dd>巨峰では飽き足らない方へ。</dd>
-                <dt>旬</dt><dd class="placeholder-text">○月頃（追記）</dd>
-                <dt>甘さ / 酸味 / 食感 / 香り</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>用途</dt><dd>生食・贈答</dd>
+                <dt>特徴</dt><dd>巨峰では飽き足らない方へ。</dd>
+                <dt>収穫時期</dt><dd>直売期（8月上旬〜なくなり次第）</dd>
+                <dt>楽しみ方</dt><dd>生食・贈答</dd>
               </dl>
             </div>
           </article>
           <article class="card" id="queen">
-            <figure class="photo-slot"><div class="photo-slot__frame" data-label="クインニーナの写真"></div></figure>
+            <figure class="photo photo--contain"><img src="./images/lineup_grape_07.png" alt="クインニーナ" /></figure>
             <div class="card__body">
               <h3>クインニーナ</h3>
               <dl class="specs">
                 <dt>色</dt><dd>赤</dd>
                 <dt>種</dt><dd>なし</dd>
-                <dt>食感</dt><dd>こんにゃくゼリーのような食感と甘さ。</dd>
-                <dt>旬</dt><dd class="placeholder-text">○月頃（追記）</dd>
-                <dt>香り / 酸味</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>用途</dt><dd>生食・干しぶどうバターサンドにも使用</dd>
+                <dt>特徴</dt><dd>こんにゃくゼリーのような食感と甘さ。</dd>
+                <dt>収穫時期</dt><dd>直売期（8月上旬〜なくなり次第）</dd>
+                <dt>楽しみ方</dt><dd>生食。干しぶどうバターサンドにも使用</dd>
               </dl>
             </div>
           </article>
-          <article class="card" id="buffalo">
-            <figure class="photo-slot"><div class="photo-slot__frame" data-label="バッファローの写真"></div></figure>
-            <div class="card__body">
-              <h3>バッファロー</h3>
-              <dl class="specs">
-                <dt>色</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>種</dt><dd class="placeholder-text">農園で追記</dd>
-                <dt>用途</dt><dd>100%ぶどうジュースの原料として販売実績あり。濃厚で、炭酸で割っても楽しめます。</dd>
-                <dt>旬 / 甘さ / 酸味 / 食感 / 香り</dt><dd class="placeholder-text">農園で追記</dd>
-              </dl>
-            </div>
-          </article>
-          <article class="card" id="berry-a">
-            <figure class="photo-slot"><div class="photo-slot__frame" data-label="ベリーAの写真"></div></figure>
-            <div class="card__body">
-              <h3>ベリーA</h3>
-              <dl class="specs">
-                <dt>用途</dt><dd>ぶどうジュースの品種のひとつ（巨峰・バッファローと並ぶ）。</dd>
-                <dt>色 / 種 / 旬 / 味</dt><dd class="placeholder-text">農園で追記</dd>
-              </dl>
-            </div>
-          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--paper" id="juice">
+      <div class="wrap split split--top">
+        <figure class="photo photo--field">
+          <img src="./images/juice.jpg" alt="ふくおかさん家の手づくりぶどうジュース" />
+        </figure>
+        <div>
+          <p class="kicker">加工品</p>
+          <h2 class="heading">ジュースになるぶどうも、わが家の味。</h2>
+          <p>巨峰・ベリーA・バッファローの3種類で、100%ぶどうジュースをつくっています。とても濃厚で甘く、炭酸で割っても楽しめます。</p>
+          <a class="btn btn--grape" href="https://budounofukuoka.stores.jp/?category_id=618caa4af1f39a159fb4f0d0" target="_blank" rel="noopener noreferrer">オンラインショップを見る</a>
         </div>
       </div>
     </section>
 
     <section class="section section--leaf">
       <div class="wrap">
-        <h2 class="heading">そのほかの品種</h2>
-        <p class="lead">公式サイトで紹介されている品種です。詳細項目は、情報が届き次第カード化できます。</p>
+        <header class="section-head">
+          <h2 class="heading">そのほかの品種</h2>
+          <p class="lead">公式サイトで紹介されている品種です。</p>
+        </header>
         <div class="table-wrap">
           <table>
             <thead><tr><th>品種</th><th>色</th><th>種</th><th>公式の紹介</th></tr></thead>
@@ -215,7 +203,7 @@
         <p>もぎたて・とりたてのぶどうを出荷しています。届いたら冷蔵庫へ。食べる分ずつ洗ってお召し上がりください。</p>
         <p class="note">種なしはジベレリン処理でつくることがあります。種があるぶどうのほうが味が濃くなる、と農園では伝えています。荷造りには万全を期していますが、生もののため多少の脱粒はご了承ください。傷みがひどい場合はご一報ください。</p>
         <div class="actions" style="margin-top:24px;">
-          <a class="btn btn--grape" href="https://budounofukuoka.stores.jp/" target="_blank" rel="noopener noreferrer">おすすめ商品をSTORESで見る</a>
+          <a class="btn btn--grape" href="https://budounofukuoka.stores.jp/" target="_blank" rel="noopener noreferrer">オンラインショップを見る</a>
           <a class="btn btn--paper" href="./guide.html">はじめての方へ</a>
         </div>
       </div>

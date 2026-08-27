@@ -9,3 +9,6 @@ ehthumbs.db
 .env.*
 .vscode/
 .idea/
+images/_tmp_html/
+images/_fetch.ps1
+images/_fetch_log.txt
