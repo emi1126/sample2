@@ -533,7 +533,7 @@ a.card:hover { border-color: var(--brass); color: inherit; }
   overflow: hidden;
 }
 .people-feature .photo img {
-  object-position: center 20%;
+  object-position: 82% 10%;
 }
 .flow-visual img {
   width: 100%;
