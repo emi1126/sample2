@@ -11,7 +11,15 @@
       link.addEventListener("click", function () {
         nav.classList.remove("is-open");
         toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "メニューを開く");
       });
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 1024 && nav.classList.contains("is-open")) {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "メニューを開く");
+      }
     });
   }
 
