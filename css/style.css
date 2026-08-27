@@ -47,7 +47,8 @@ body {
   letter-spacing: 0.02em;
   padding-bottom: calc(var(--sticky-h) + 12px);
   text-align: left;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
   line-break: strict;
 }
 
@@ -375,9 +376,11 @@ button, input, select, textarea { font-family: inherit; }
 }
 .hero__sub {
   margin: 0 auto 28px;
-  max-width: 28em;
+  max-width: 34em;
   color: #f3eadc;
   font-size: 0.95rem;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 .hero .actions { justify-content: center; }
 .hero .btn--ghost {
@@ -553,6 +556,7 @@ a.card:hover { border-color: var(--brass); color: inherit; }
   display: flex;
   flex-direction: column;
   min-width: 0;
+  height: 100%;
 }
 .flow-item strong {
   display: block;
@@ -564,13 +568,13 @@ a.card:hover { border-color: var(--brass); color: inherit; }
 }
 .flow-item p {
   margin: 8px 0 0;
-  flex: 1;
+  flex: 1 1 auto;
 }
 .flow-item img,
 .flow-item .photo {
   width: 100%;
   max-width: 100%;
-  margin: 12px 0 0;
+  margin: auto 0 0;
 }
 .flow-item .photo img,
 .flow-item img {
