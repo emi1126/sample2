@@ -356,19 +356,20 @@ button, input, select, textarea { font-family: inherit; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(32, 20, 34, 0.18) 0%, rgba(32, 20, 34, 0.42) 48%, rgba(32, 20, 34, 0.78) 100%);
+    linear-gradient(180deg, rgba(32, 20, 34, 0.32) 0%, rgba(32, 20, 34, 0.58) 38%, rgba(32, 20, 34, 0.8) 100%);
 }
 .hero__content {
   position: relative;
   padding: 56px 0 64px;
-  max-width: 36em;
+  max-width: min(42em, 100%);
   margin-inline: auto;
 }
 .hero__place {
   margin: 0 0 12px;
-  letter-spacing: 0.32em;
-  font-size: 0.72rem;
-  color: #eadfcf;
+  letter-spacing: 0.28em;
+  font-size: 0.74rem;
+  color: #fffcf7;
+  text-shadow: 0 1px 10px rgba(32, 20, 34, 0.55);
 }
 .hero h1 {
   margin: 0 0 14px;
@@ -377,16 +378,28 @@ button, input, select, textarea { font-family: inherit; }
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.06em;
+  color: var(--white);
+  text-shadow: 0 1px 14px rgba(32, 20, 34, 0.35);
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  line-break: strict;
 }
 .hero__sub {
   margin: 0 auto 28px;
-  max-width: 34em;
-  color: #f3eadc;
+  width: 100%;
+  max-width: min(36em, 100%);
+  color: #fff6ea;
   font-size: 0.95rem;
-  overflow-wrap: normal;
-  word-break: normal;
-  line-break: auto;
+  line-height: 1.85;
+  text-shadow: 0 1px 8px rgba(32, 20, 34, 0.45);
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  line-break: strict;
   text-wrap: pretty;
+}
+.hero-sub-rest {
+  display: inline-block;
+  max-width: 100%;
 }
 .hero .actions { justify-content: center; }
 .hero .btn--ghost {
@@ -484,6 +497,9 @@ button, input, select, textarea { font-family: inherit; }
 #landscape .mosaic .photo--tall img {
   object-position: 38% 28%;
 }
+#about-intro .photo img {
+  object-position: 52% 68%;
+}
 
 /* Cards */
 .story-grid,
@@ -549,6 +565,14 @@ button, input, select, textarea { font-family: inherit; }
 }
 .card p { margin: 0 0 12px; color: var(--ink-soft); }
 .card p:last-child { margin-bottom: 0; }
+#varieties .card p {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-break: strict;
+}
 a.card { text-decoration: none; color: inherit; transition: border-color var(--ease); }
 a.card:hover { border-color: var(--brass); color: inherit; }
 
@@ -970,6 +994,7 @@ th {
   line-break: strict;
 }
 .nowrap { white-space: nowrap; }
+.break-pc { display: none; }
 .cta-band .actions { justify-content: center; }
 
 .gift-mosaic { margin: 20px 0 24px; }
@@ -1006,7 +1031,12 @@ th {
     align-items: center;
     min-height: min(78svh, 680px);
   }
-  .hero__content { padding: 72px 0; }
+  .hero__content { padding: 72px 0; max-width: min(48em, 100%); }
+  .hero h1 {
+    white-space: nowrap;
+    font-size: clamp(1.9rem, 2.15vw + 1rem, 2.85rem);
+  }
+  .break-pc { display: block; }
   .calendar { grid-template-columns: repeat(3, 1fr); }
   .calendar__month { border: 1px solid var(--line); }
   .calendar__month + .calendar__month { border-left: 0; }
