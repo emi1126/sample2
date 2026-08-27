@@ -460,8 +460,17 @@ button, input, select, textarea { font-family: inherit; }
 }
 .mosaic .photo img { min-height: 0; }
 
+#landscape .section-head {
+  margin-bottom: 24px;
+}
 #landscape .mosaic {
   gap: 16px;
+  align-items: stretch;
+}
+#landscape .mosaic .photo {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
 }
 #landscape .mosaic .photo img {
   aspect-ratio: 3 / 2;
@@ -937,25 +946,30 @@ th {
   justify-items: center;
 }
 .cta-band .heading {
-  max-width: min(26em, 100%);
+  width: 100%;
+  max-width: min(24em, 100%);
+  min-width: 0;
   margin-inline: auto;
   margin-bottom: 8px;
-  font-size: clamp(1.4rem, 3.2vw, 1.9rem);
+  font-size: clamp(1.28rem, 3.2vw, 1.9rem);
   letter-spacing: 0.04em;
   text-wrap: pretty;
-  overflow-wrap: normal;
-  word-break: normal;
-  line-break: auto;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  line-break: strict;
 }
 .cta-band .lead {
-  max-width: 32em;
+  width: 100%;
+  max-width: min(28em, 100%);
+  min-width: 0;
   margin: 0 auto 8px;
   text-align: left;
   text-wrap: pretty;
-  overflow-wrap: normal;
-  word-break: normal;
-  line-break: auto;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+  line-break: strict;
 }
+.nowrap { white-space: nowrap; }
 .cta-band .actions { justify-content: center; }
 
 .gift-mosaic { margin: 20px 0 24px; }
