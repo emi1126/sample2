@@ -93,13 +93,13 @@ button, input, select, textarea { font-family: inherit; }
 }
 
 .section-head {
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px;
 }
 .section-head .kicker { letter-spacing: 0.32em; }
 .section-head .heading { margin-bottom: 14px; }
 .section-head .lead {
-  margin: 0 auto;
+  margin: 0;
   text-align: left;
 }
 .section-head::after {
@@ -107,7 +107,7 @@ button, input, select, textarea { font-family: inherit; }
   display: block;
   width: 36px;
   height: 1px;
-  margin: 22px auto 0;
+  margin: 22px 0 0;
   background: var(--brass);
   opacity: 0.7;
 }
@@ -165,8 +165,12 @@ button, input, select, textarea { font-family: inherit; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--cream);
+  isolation: isolate;
+  background-color: #fbf8f2;
+  background: #fbf8f2;
   border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 .site-header__inner {
   display: flex;
@@ -493,9 +497,10 @@ a.card:hover { border-color: var(--brass); color: inherit; }
 
 .flow-item {
   display: grid;
-  grid-template-columns: 48px 1fr;
+  grid-template-columns: 48px minmax(0, 1fr);
   gap: 14px;
   align-items: start;
+  min-width: 0;
   padding: 18px 18px 20px;
   text-align: left;
   overflow: hidden;
@@ -662,7 +667,7 @@ th {
 .purpose-q {
   font-family: var(--font-serif);
   font-size: clamp(1.4rem, 4vw, 1.9rem);
-  text-align: center;
+  text-align: left;
   margin: 0 0 8px;
 }
 
@@ -803,6 +808,7 @@ th {
 }
 
 @media (min-width: 768px) {
+  :root { --header-h: 112px; }
   body { padding-bottom: 0; }
   .sticky-cta { display: none; }
   .nav-toggle { display: none; margin-left: 0; }
@@ -833,7 +839,9 @@ th {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    gap: 6px 12px;
+    align-items: center;
+    gap: 8px 14px;
+    row-gap: 8px;
   }
   .nav a {
     border: 0;
@@ -849,7 +857,10 @@ th {
   .event-grid,
   .purpose-grid,
   .guide-grid,
-  .flow-list--steps { grid-template-columns: repeat(2, 1fr); }
+  .flow-list--steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
   .split { grid-template-columns: 1fr 1fr; align-items: center; }
   .split--top { align-items: start; }
   .hero { align-items: center; }
