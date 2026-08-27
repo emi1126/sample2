@@ -381,6 +381,8 @@ button, input, select, textarea { font-family: inherit; }
   font-size: 0.95rem;
   overflow-wrap: normal;
   word-break: normal;
+  line-break: auto;
+  text-wrap: pretty;
 }
 .hero .actions { justify-content: center; }
 .hero .btn--ghost {
