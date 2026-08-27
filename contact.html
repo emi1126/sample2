@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>お問い合わせ | 葡萄のふくおか</title>
+  <meta name="description" content="葡萄のふくおかへのお問い合わせ。商品・贈答品・イベント・農園について。メール、電話、Instagramからもどうぞ。" />
+  <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="./index.html"><span class="brand__name">葡萄のふくおか</span><span class="brand__sub">愛知県日進市のぶどう農園</span></a>
+      <a class="btn btn--grape header-cta" href="https://budounofukuoka.stores.jp/" target="_blank" rel="noopener noreferrer">オンラインショップ</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <nav class="nav" id="siteNav" aria-label="メインメニュー">
+        <ul class="nav__list">
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./about.html">農園について</a></li>
+          <li><a href="./grapes.html">ぶどう・品種</a></li>
+          <li><a href="./enjoy.html">楽しみ方</a></li>
+          <li><a href="./shop.html">オンラインショップ</a></li>
+          <li><a href="./news.html">NEWS</a></li>
+          <li><a href="./guide.html">はじめての方へ</a></li>
+          <li><a href="./access.html">アクセス</a></li>
+          <li><a href="./contact.html" aria-current="page">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="wrap wrap--narrow">
+        <p class="kicker">CONTACT</p>
+        <h1 class="heading">お問い合わせ</h1>
+        <p class="lead">商品、贈答、イベント、農園のこと。目的が分かるとご案内しやすくなります。購入手続きはSTORESへお進みください。</p>
+      </div>
+    </section>
+
+    <section class="section section--paper">
+      <div class="wrap split split--top">
+        <form class="form card" id="contactForm" style="padding:20px;" novalidate>
+          <div>
+            <label for="c-type">お問い合わせの種別<span class="req">必須</span></label>
+            <select id="c-type" name="type" required>
+              <option value="">選択してください</option>
+              <option>商品について</option>
+              <option>贈答品について</option>
+              <option>イベントについて</option>
+              <option>農園について</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div>
+            <label for="c-name">お名前<span class="req">必須</span></label>
+            <input id="c-name" name="name" type="text" required placeholder="例）山田 太郎" />
+          </div>
+          <div>
+            <label for="c-email">メールアドレス<span class="req">必須</span></label>
+            <input id="c-email" name="email" type="email" required placeholder="例）sample@example.com" />
+          </div>
+          <div>
+            <label for="c-message">内容<span class="req">必須</span></label>
+            <textarea id="c-message" name="message" required placeholder="ご質問をご記入ください"></textarea>
+          </div>
+          <p class="note">送信ボタンでメールアプリが開きます。入力内容は返信のためにのみ使ってください。</p>
+          <button class="btn btn--grape btn--block" type="submit">メールを作成する</button>
+          <p class="form-status" id="contactStatus" role="status"></p>
+        </form>
+        <div>
+          <article class="card" style="margin-bottom:16px;">
+            <div class="card__body">
+              <h2>お電話</h2>
+              <p><a href="tel:0528061819">052-806-1819</a><br>直売期はお電話がつながりにくいことがあります。</p>
+            </div>
+          </article>
+          <article class="card" style="margin-bottom:16px;">
+            <div class="card__body">
+              <h2>メール</h2>
+              <p><a href="mailto:info@budounofukuoka.com">info@budounofukuoka.com</a></p>
+            </div>
+          </article>
+          <article class="ig-card">
+            <h2>Instagramで聞く</h2>
+            <p>農園の日常をInstagramで発信しています。DMでのご質問もどうぞ。</p>
+            <a class="btn btn--grape" href="https://www.instagram.com/budounofukuoka/" target="_blank" rel="noopener noreferrer">@budounofukuoka</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="brand__name">葡萄のふくおか</p>
+      <nav aria-label="フッター"><a href="./index.html">HOME</a><a href="./shop.html">オンラインショップ</a><a href="./access.html">アクセス</a></nav>
+      <small>&copy; <span data-year></span> 葡萄のふくおか</small>
+    </div>
+  </footer>
+  <div class="sticky-cta" aria-label="クイック導線">
+    <a href="./guide.html">はじめて</a>
+    <a href="https://www.instagram.com/budounofukuoka/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a class="is-buy" href="https://budounofukuoka.stores.jp/" target="_blank" rel="noopener noreferrer">購入する</a>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
